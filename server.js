@@ -104,4 +104,6 @@ app.get("/", (req, res) => {
 var publicDir = require('path').join(__dirname,'/uploads'); 
 console.log(publicDir);
 app.use(express.static(publicDir));
-app.listen(4000);
+
+
+app.listen(process.env.PORT || 4000);
